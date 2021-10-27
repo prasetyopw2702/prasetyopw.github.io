@@ -11,6 +11,10 @@
     <!-- Bootstrap Icones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <!-- My Css -->
     <link rel="stylesheet" href="style.css" />
 
@@ -49,7 +53,7 @@
     <section class="jumbotron text-center">
       <img src="img/1dc4de63-0a8c-4292-ad29-ba1fdeaa55e1.jpeg" alt="Ilham Prasetyo Widodo" width="180" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ilham Prasetyo Widodo!</h1>
-      <p class="lead">Mahasiswa Manajemen dan Sastra Cina</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -62,18 +66,18 @@
 
     <!-- About -->
     <section id="about">
-      <div class="container">
+      <div class="container"
+      >
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4"  data-aos="fade-down" data-aos-duration="500">
             <p>
               I am a final year student from Universitas Gunadarma majoring in Management also Chinese Studies student of Universitas Indonesia. Experienced in direct selling. My main goal in life is to work hard to become successful in
-              every aspect of my life.
-            </p>
+              every aspect of my life.</p>
           </div>
                   </div>
         </div>
@@ -98,7 +102,7 @@
         </div>
         <div class="row justify-content-center mb-3">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="200">
               <img src="img/Projects/2.png" class="card-img-top" alt="Project 1" />
               <div class="card-body row text-center">
                 <p class="card-text">Management Studies</p>
@@ -106,7 +110,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="200" data-aos-delay="100">
               <img src="img/Projects/1.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body row text-center">
                 <p class="card-text">Manager production, Supply chain management and promotional.</p>
@@ -114,7 +118,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="200" data-aos-delay="150">
               <img src="img/Projects/3.png" class="card-img-top" alt="Project 3" />
               <div class="card-body row text-center">
                 <p class="card-text">Chinese Studies</p>
@@ -122,7 +126,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="200" data-aos-delay="200">
               <img src="img/Projects/4.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -130,7 +134,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="200" data-aos-delay="250">
               <img src="img/Projects/5.jpg" class="card-img-top" alt="Project 5" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -149,7 +153,7 @@
     </section>
 
     <!-- Akhir Projects -->
-
+   
     <!-- Contact -->
     <section id="contact">
       <div class="container">
@@ -204,7 +208,25 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 100
+      });
+    </script>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+  <script>
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.lead',{duration: 2, delay: 1.5, text: 'Manajemen | Sastra Cina | Honey Bakery Cibubur'})
+    gsap.from('.jumbotron img', { duration: 1, rotateY: 360, opacity: 0 });
+    gsap.from('.navbar', {duration: 1.5, y: -'100%',opacity: 0})
+    gsap.from('.display-4', {duration: 1.5, y: -50, opacity: 0, delay:0.5, ease:'back'})
+  </script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbycPKeWLl3rqdhykTEK5amYZz73yIEXil27_h_Rj0Az0R7QCfyMzeGqQ5731QbYx4kd2A/exec'
       const form = document.forms['ipw-contact-form']
